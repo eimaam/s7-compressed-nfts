@@ -1,8 +1,8 @@
 {
     "name": "eimaam",
-    "symbol": "SSFNFT",
+    "symbol": "eimaam",
     "description": "First NFT",
-    "uri": "https://drive.google.com/file/d/1fNcuChDDSdUjMp7bClVaSkBQ4mjk3yMN",
+    "uri": "https://raw.githubusercontent.com/eimaam/s7-compressed-nfts/refs/heads/dev/assets/profile_pic.JPG",
     "seller_fee_basis_points": 500,
     "collection": { "key": "collectionMint", "verified": false },
     "attributes": [
