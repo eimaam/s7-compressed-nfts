@@ -1,9 +1,8 @@
 import { createUmi } from '@metaplex-foundation/umi-bundle-defaults'
 import { mplBubblegum } from '@metaplex-foundation/mpl-bubblegum'
-import { Keypair } from '@solana/web3.js'
-import { generateSigner, keypairIdentity, KeypairSigner } from '@metaplex-foundation/umi'
+import { keypairIdentity } from '@metaplex-foundation/umi'
 import { mplTokenMetadata } from '@metaplex-foundation/mpl-token-metadata'
-import { getKeypair, getSecretKey } from './utils'
+import { getSecretKey } from './utils'
 import { irysUploader } from '@metaplex-foundation/umi-uploader-irys'
 
 // Connect to Solana devnet (a test environment)

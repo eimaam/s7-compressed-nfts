@@ -1,12 +1,9 @@
-import { Connection, Keypair } from "@solana/web3.js";
+import { Keypair } from "@solana/web3.js";
 import fs from "fs";
-
-export const NFT_IMAGE =
-  "https://drive.google.com/file/d/1fNcuChDDSdUjMp7bClVaSkBQ4mjk3yMN/view?usp=sharing";
 
 // Generate keypair and store it in a file keypair.json
 // aidropped sols to the keypair address to allow for umi transactions
-const generateSigner = async () => {
+export const generateSigner = async () => {
   const keypair = Keypair.generate();
   const keypairData = {
     secretKey: Array.from(keypair.secretKey),
