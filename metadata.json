@@ -1,0 +1,28 @@
+{
+    "name": "eimaam",
+    "symbol": "SSFNFT",
+    "description": "First NFT",
+    "uri": "https://drive.google.com/file/d/1fNcuChDDSdUjMp7bClVaSkBQ4mjk3yMN",
+    "seller_fee_basis_points": 500,
+    "collection": { "key": "collectionMint", "verified": false },
+    "attributes": [
+        {
+          "trait_type": "Website",
+          "value": "https://eimaam.dev"
+        },
+      {
+        "trait_type": "Github Link",
+        "value": "https://github.com/eimaam"
+      },
+      {
+        "trait_type": "Social Link",
+        "value": "https://x.com/eimaam_d"
+      },
+      {
+        "trait_type": "Social Link",
+        "value": "https://instagram.com/eimaam.dev"
+      }
+    ]
+  }
+  
+  
