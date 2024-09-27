@@ -22,7 +22,7 @@ const collectionId = generateSigner(umi);
 async function mintCNFT() {
   const data = {
     name: "eimaam",
-    image: metadata.image,
+    image: metadata.uri,
     description: metadata.description,
     external_url: "https://eimaam.dev",
   };
