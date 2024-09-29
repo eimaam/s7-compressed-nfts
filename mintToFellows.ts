@@ -8,11 +8,13 @@ import {
 import fs from "fs";
 import { createNft } from "@metaplex-foundation/mpl-token-metadata";
 
+const fellowsWalletFile = fs.readFileSync("fellows.wallets.json", "utf-8");
+const fellows = JSON.parse(fellowsWalletFile);
+
 const metadataFile = fs.readFileSync("metadata.json", "utf-8");
 
 const metadata = JSON.parse(metadataFile);
 
-const leafOwner = publicKey("8hBosSCfzLy2fyoDU6UxfyALdj3vpPcW62s47Mth2ZSP"); // The owner of the cNFT
 const merkleTreePublicKey = publicKey(
   "3vA7mPJ4eUzLJM1XQZTv3zPezrHa5Kfv5V7rS6Htpdu2"
 );
@@ -44,8 +46,12 @@ async function mintCNFT() {
 
   console.log("Minting cNFT...");
 
+//   mint to fellows
+
+  for (const fellow of fellows) {    
+
   const { signature } = await mintToCollectionV1(umi, {
-    leafOwner,
+    leafOwner: publicKey(fellow),
     merkleTree: merkleTreePublicKey,
     collectionMint: collectionId.publicKey,
     metadata: {
@@ -67,8 +73,9 @@ async function mintCNFT() {
       commitment: "finalized",
     },
   });
-
+  
   console.log(`Minted cNFT with transaction: ${signature}`);
+}
 }
 
 mintCNFT();
